@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>缩放</title>
+		<style type="text/css">
+			h1 {
+				width: 300px;
+				height: 50px;
+				margin: 50px auto;
+			}
+			
+			body {
+				perspective: 1000px;
+				-webkit-perspective: 1000px;
+			}
+			
+			.box {
+				width: 300px;
+				height: 300px;
+				background-color: red;
+				margin: 50px auto;
+				-webkit-transform: scale(1, 1);
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="box">
+
+		</div>
+
+		<h1> scaleX:<input type="range" name="scale" id="scaleX" value="100" min="1" max="200" /> </h1>
+		<h1> scaleY:<input type="range" name="scale" id="scaleY" value="100" min="1" max="200" /> </h1>
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<script type="text/javascript">
+			$("input").on('input propertychange', function() {
+				var x = $("#scaleX").val() / 100;
+				var y = $("#scaleY").val() / 100;
+				$(".box").css("-webkit-transform", "scale(" + x + "," + y + ")");
+			});
+		</script>
+
+	</body>
+
+</html>

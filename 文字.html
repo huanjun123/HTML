@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				background-color: black;
+			}
+			
+			ul {
+				width: 150px;
+				padding: 20px;
+				border: solid 1px red;
+				font-family: baby-font;
+			}
+			
+			ul li {
+				line-height: 2em;
+				/* 文字不换行 */
+				white-space: nowrap;
+				/* 超出部分隐藏*/
+				overflow: hidden;
+				/* 超出文字用省略号代替 */
+				text-overflow: ellipsis;
+			}
+			
+			@font-face {
+				font-family: 'baby-font';
+				src: url(img/简娃娃篆.ttf);
+			}
+			
+			@font-face {
+				font-family: 'snow';
+				src: url(img/简雪峰.ttf);
+			}
+			
+			h1 {
+				font-family: snow;
+			}
+			/* Bootstrap 字体图标 */
+			
+			i.fa {
+				font-size: 100px;
+				color: rgba(0, 0, 0, 0.5);
+			}
+			
+			* {
+				/* 水平偏移   垂直偏移    模糊   颜色  */
+				text-shadow: 1px 1px 30px white;
+			}
+		</style>
+		<link rel="stylesheet" href="css/font-awesome.css" />
+	</head>
+
+	<body>
+
+		<i class="fa fa-home"></i>
+		<i class="fa fa-apple"></i>
+		<i class="fa fa-wechat"></i>
+		<i class="fa fa-weibo"></i>
+		<h1>雪峰字体</h1>
+		<ul>
+			<li>新闻标题新</li>
+			<li>新闻标题新闻标题新闻标题</li>
+			<li>新闻标题新闻标题新闻标题</li>
+			<li>新闻标题新闻标题新闻标题</li>
+			<li>新闻标题新闻标题新闻标题</li>
+			<li>新闻标题新闻标题新闻标题</li>
+		</ul>
+	</body>
+
+</html>

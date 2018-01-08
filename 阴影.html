@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>阴影</title>
+		<style type="text/css">
+			#canvas{
+				width: 400px;
+				height: 400px;
+				display: block;
+				margin: 50px auto;
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<canvas id="canvas" width="800" height="800"></canvas>
+		
+		<script type="text/javascript">
+			
+			var canvas = document.querySelector("#canvas");
+			
+			var context = canvas.getContext("2d");
+			
+			context.fillStyle = "red";
+			context.fillRect(100,100,600,600);
+			
+//			context.fillstyle = "blue";
+//			context.fillRect(200,200,400,400);
+			
+			var color = "red";
+			
+			canvas.onmousemove = function(e){
+				
+				var x = (e.pageX - this.offsetLeft)*2;
+				var y = (e.pageY - this.offsetTop)*2;
+				
+				context.clearRect(0,0,800,800);
+				if(x>100&&x<700&&y>100&&y<700){
+					context.shadowColor = "#a9a9a9";
+					context.shadowBlur = 30;
+					context.shadowOffsetX = 20;
+					context.shadowOffsetY = 20;
+				}else{
+					context.shadowColor = "white";
+					context.shadowBlur = 0;
+					context.shadowOffsetX = 0;
+					context.shadowOffsetY = 0;
+				}
+				
+				context.fillStyle = color;
+				context.fillRect(100,100,600,600);
+			}
+			
+			canvas.onclick = function(e){
+				var x = (e.pageX - this.offsetLeft)*2;
+				var y = (e.pageY - this.offsetTop)*2;
+				if(x>100&&x<700&&y>100&&y<700){
+					color = color =='red'?'green':'red';
+				}
+			}
+			//canvas动画原理
+			//canvas事件应用
+			
+		</script>
+		
+	</body>
+</html>
