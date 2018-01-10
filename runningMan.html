@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>人的动画</title>
+		<link rel="stylesheet" href="css/runningMan.css" />
+		<style type="text/css">
+			.man{
+				width: 84px;
+				height: 274px;
+				margin-top: 100px;
+				margin-left: auto;
+				margin-right: auto;
+				z-index: 0;
+				-webkit-animation: body-action 2s linear infinite;
+			}
+			
+			.bottm-right{
+				width: 80px;
+				height: 120px;
+				top: 250px;
+				margin-left: auto;
+				margin-right: auto;
+				z-index: -20;
+				-webkit-transform-origin: 18px 10px;
+				-webkit-animation: bottm-left 2s linear infinite;
+			}
+			
+			.bottm-left{
+				width: 80px;
+				height: 120px;
+				top: 250px;
+				margin-left: auto;
+				margin-right: auto;
+				z-index: -20;
+				-webkit-transform-origin: 18px 10px;
+				-webkit-animation: bottm-right 2s linear infinite;
+			}
+			
+			.right-boottm-min{
+				width: 53px;
+				height: 173px;
+				left: 2px;
+				top: 75px;
+				margin-left: auto;
+				margin-right: auto;
+				z-index: -20;
+				-webkit-transform-origin: 18px 26px;
+				-webkit-animation: right-bottm-min 2s linear infinite;
+			}
+			.left-boottm-min{
+				width: 53px;
+				height: 173px;
+				left: 2px;
+				top: 75px;
+				margin-left: auto;
+				margin-right: auto;
+				z-index: -20;
+				-webkit-transform-origin: 18px 26px;
+				-webkit-animation: left-bottm-min 2s linear infinite;
+			}
+			
+			.bottm-xie1{
+				width: 67px;
+				height: 34px;
+				left: 2px;
+				top: 155px;
+				margin-left: auto;
+				margin-right: auto;
+				z-index: 0;
+				-webkit-transform-origin: 18px 26px;
+				-webkit-animation: bottm-xie1 2s linear infinite;
+			}
+			.bottm-xie2{
+				width: 67px;
+				height: 34px;
+				left: 2px;
+				top: 155px;
+				margin-left: auto;
+				margin-right: auto;
+				z-index: 0;
+				-webkit-transform-origin: 18px 26px;
+				-webkit-animation: bottm-xie2 2s linear infinite;
+			}
+			
+			.bottm-xiejian1{
+				width: 28px;
+				height: 25px;
+				left: 59px;
+				top: 6px;
+				margin-left: auto;
+				margin-right: auto;
+				z-index: -20;
+				-webkit-transform-origin: 18px 15px;
+				-webkit-animation: bottm-xiejian1 2s linear infinite;
+			}
+			.bottm-xiejian2{
+				width: 28px;
+				height: 25px;
+				left: 59px;
+				top: 6px;
+				margin-left: auto;
+				margin-right: auto;
+				z-index: -20;
+				-webkit-transform-origin: 18px 15px;
+				-webkit-animation: bottm-xiejian2 2s linear infinite;
+			}
+			
+			.man div{
+				position: absolute;
+			}
+			
+			.man img{
+				width: inherit;
+				height: inherit;
+				float: left;
+			}
+			
+			.right-bicep{
+				width: 51px;
+				height: 124px;
+				left: 9px;
+				top: 92px;
+				z-index: 999;
+				-webkit-transform-origin: 27px 28px;
+				-webkit-animation: right-bicep-action 2s linear infinite;
+			}
+			.right-min{
+				width: 36px;
+				height: 121px;
+				left: 15px;
+				top: 100px;
+				-webkit-transform-origin: 18px 14px;
+				-webkit-animation: right-min 2s linear infinite;
+			}
+			
+			.left-bicep{
+				width: 51px;
+				height: 124px;
+				left: 9px;
+				top: 92px;
+				z-index: -9999;
+				-webkit-transform-origin: 27px 28px;
+				-webkit-animation: left-bicep-action 2s linear infinite;
+			}
+			
+			.left-min{
+				width: 36px;
+				height: 121px;
+				left: 14px;
+				top: 105px;
+				-webkit-transform-origin: 18px 14px;
+				-webkit-animation: left-min 2s linear infinite;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="man">
+			<img src="img/torso.png"/>
+			<div class="left-bicep">
+				<img src="img/left-bicep.png" />
+				<div class="left-min">
+					<img src="img/left-forearm.png" />
+				</div>
+			</div>
+			<div class="right-bicep">
+				<img src="img/right-bicep.png" />
+				<div class="right-min">
+					<img src="img/right-forearm.png" />
+				</div>
+			</div>
+			
+			<div class="bottm-right">
+					<img src="img/left-thigh.png" />
+					<div class="right-boottm-min">
+						<img src="img/shin.png" />
+						<div class="bottm-xie1">
+							<img src="img/foot.png" />
+							<div class="bottm-xiejian1">
+								<img src="img/toes.png" />
+							</div>
+						</div>
+					</div>
+			</div>
+			<div class="bottm-left">
+					<img src="img/right-thigh.png" />
+					<div class="left-boottm-min">
+						<img src="img/shin.png" />
+						<div class="bottm-xie2">
+							<img src="img/foot.png" />
+							<div class="bottm-xiejian2">
+									<img src="img/toes.png" />
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</body>
+</html>
